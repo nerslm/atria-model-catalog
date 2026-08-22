@@ -1,9 +1,18 @@
 {
   "schemaVersion": 1,
-  "revision": "sha256-5fac799e6f712d19a4bc891550f3e2c2b5d6060eda2fc55ee3c857fe614ea7ac",
-  "sourceRepository": "nerslm/atria-code",
-  "sourceCommit": "b82fb91d9fbf08723e1631c4b0b43711e068ff69",
-  "publishedDate": "2026-08-22",
+  "minimumPiVersion": "0.80.7",
+  "revision": "sha256-ba74f961729a7a050701eaf7f83d579b0518c3464c1e14a3c028c5164ba58b3c",
+  "sourceCommit": "74c6fdc287ccf2c3d67c08454d56346179c8f371",
   "providerCount": 35,
-  "modelCount": 1256
+  "modelCount": 1283,
+  "upstream": {
+    "schemaVersion": 1,
+    "package": "@earendil-works/pi-ai",
+    "version": "0.84.2",
+    "tarball": "https://registry.npmjs.org/@earendil-works/pi-ai/-/pi-ai-0.84.2.tgz",
+    "integrity": "sha512-6MzsrYIYNVlE7SfpbL2yYb67Qo58p/7Q+xWG1RZvoX1P80aRCHSod2/13aFpxkow1lPO2LEh3c495J0Gwmyjig==",
+    "generatedAt": "2026-08-14T10:02:30.583Z",
+    "structureHash": "012f19b2e2c92706bc700f4c9dd80a21f1f43d68959bc90c78d2cdb51374d5cc",
+    "providerCount": 39
+  }
 }
