@@ -8,7 +8,7 @@ Clients fetch provider shards from:
 api/models/providers/<provider-id>.json
 ```
 
-The catalog contains model identifiers, display names, modalities, reasoning metadata, pricing, combined context capacities, optional hard input limits, and output budgets. It does not control provider endpoints, headers, credentials, compatibility behavior, or API implementations; those remain local to atria-code.
+The catalog contains model identifiers, display names, modalities, reasoning metadata, pricing, combined context capacities, and per-request output limits. It does not control provider endpoints, headers, credentials, compatibility behavior, or API implementations; those remain local to atria-code.
 
 ## Refresh policy
 
