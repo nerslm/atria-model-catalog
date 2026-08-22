@@ -1,0 +1,70 @@
+name: Update public model catalog
+
+on:
+  schedule:
+    - cron: "23 */4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-public-model-catalog
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout catalog repository
+        uses: actions/checkout@v4
+
+      - name: Checkout atria-code
+        uses: actions/checkout@v4
+        with:
+          repository: nerslm/atria-code
+          path: atria-code
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: atria-code/package-lock.json
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev fd-find ripgrep
+          sudo ln -s $(which fdfind) /usr/local/bin/fd
+
+      - name: Install atria-code dependencies
+        working-directory: atria-code
+        run: node scripts/ci-install.mjs
+
+      - name: Generate catalog from latest pi-ai
+        working-directory: atria-code
+        run: npm run generate:model-catalog
+
+      - name: Validate capability-only catalog
+        working-directory: atria-code
+        run: npm run check:model-catalog
+
+      - name: Export catalog
+        run: |
+          node atria-code/scripts/export-public-model-catalog.mjs \
+            --input atria-code/.artifacts/model-catalog \
+            --output api/models
+
+      - name: Commit changed catalog
+        run: |
+          if [ -z "$(git status --porcelain -- api/models)" ]; then
+            echo "Public model catalog is already current."
+            exit 0
+          fi
+          version="$(node -p "JSON.parse(require('fs').readFileSync('api/models/upstream.json', 'utf8')).version")"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add api/models
+          git commit -m "chore: refresh public models from pi-ai ${version}"
+          git push origin HEAD:main

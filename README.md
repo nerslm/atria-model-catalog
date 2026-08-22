@@ -28,7 +28,7 @@ The catalog contains model identifiers, display names, modalities, reasoning met
 
 ## Updating
 
-The `Publish latest public model catalog` workflow in atria-code generates, validates, and pushes this repository automatically every four hours. Its cross-repository token is stored as the `MODEL_CATALOG_TOKEN` Actions secret.
+This repository's `Update public model catalog` workflow checks out atria-code, generates and validates the latest catalog, and commits changes directly every four hours using the repository's built-in `GITHUB_TOKEN`.
 
 To reproduce it manually from atria-code:
 
