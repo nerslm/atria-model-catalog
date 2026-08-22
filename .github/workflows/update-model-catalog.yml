@@ -23,6 +23,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: nerslm/atria-code
+          token: ${{ secrets.ATRIA_CODE_TOKEN }}
           path: atria-code
 
       - name: Setup Node.js
