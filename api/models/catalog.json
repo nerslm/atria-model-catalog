@@ -1,10 +1,11 @@
 {
   "schemaVersion": 1,
   "minimumPiVersion": "0.80.7",
-  "revision": "sha256-ba74f961729a7a050701eaf7f83d579b0518c3464c1e14a3c028c5164ba58b3c",
-  "sourceCommit": "4ad32d5eaf0ec59983c9c4c57e4f5fab40a1c9d2",
-  "providerCount": 35,
-  "modelCount": 1283,
+  "revision": "sha256-81ebce0a23516430967f14ecde537d2151f4034acf1cda6a81f96877615a811b",
+  "sourceCommit": "b06503a076211642d423733f08bba52af1959019",
+  "providerCount": 39,
+  "modelCount": 1339,
+  "providerDefinitionCount": 38,
   "upstream": {
     "schemaVersion": 1,
     "package": "@earendil-works/pi-ai",
