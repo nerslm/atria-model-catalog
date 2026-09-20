@@ -1,19 +1,19 @@
 {
   "schemaVersion": 1,
   "minimumPiVersion": "0.80.7",
-  "revision": "sha256-f0aa600a081b083de59d25c3c8fca632c66fa6e34f8f4945f54476544d3bde7b",
-  "sourceCommit": "8e009bcd0444ade9680e3229065a719bb959054b",
-  "providerCount": 40,
-  "modelCount": 1453,
-  "providerDefinitionCount": 39,
+  "revision": "sha256-5c01ef97f5fbd2828631529267ac39308764c4d8aa9991d4278f46e187d3382b",
+  "sourceCommit": "6a5670a9120064f07a68aa73c12b0975751153fd",
+  "providerCount": 41,
+  "modelCount": 1458,
+  "providerDefinitionCount": 40,
   "upstream": {
     "schemaVersion": 1,
     "package": "@earendil-works/pi-ai",
-    "version": "0.86.0",
-    "tarball": "https://registry.npmjs.org/@earendil-works/pi-ai/-/pi-ai-0.86.0.tgz",
-    "integrity": "sha512-7jc4tNTBiJrfg+2/nra6JPz2d3OGiGHDKrSVHpnfvsMgMy0uy4noGb7WidDNcqSEAK1S0kcRRTmpYAK66ZlTSw==",
-    "generatedAt": "2026-09-19T23:04:01.703Z",
-    "structureHash": "88b7e49eaa516bde5dc8d8b157532baa117e3d4a1d9c616ca72f13feec1dbc95",
-    "providerCount": 40
+    "version": "0.86.1",
+    "tarball": "https://registry.npmjs.org/@earendil-works/pi-ai/-/pi-ai-0.86.1.tgz",
+    "integrity": "sha512-1XHhI6D/fyQdsBieHC/E/4zGKVOoGe4yDyX67VXvzoYkFsX/qE7NpZE7E1RC8e6Bz8B9oG/P+MQFXikv2/BGEg==",
+    "generatedAt": "2026-09-20T11:07:27.069Z",
+    "structureHash": "618c1f6945b6722ad8ce39aad35a55c3834a67c7f7a98e71e1a762e2909b9e22",
+    "providerCount": 41
   }
 }
