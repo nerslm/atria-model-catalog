@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "minimumPiVersion": "0.80.7",
-  "revision": "sha256-091539f44eba0d6ddf1b9942b645df5eed37179a993e9f51457860c177bd63bb",
+  "revision": "sha256-d23518debab00db1ec7ed47cf16447bb1bb3da280bc6e5fb25b8574bf1882fb2",
   "sourceCommit": "6a5670a9120064f07a68aa73c12b0975751153fd",
   "providerCount": 41,
   "modelCount": 1540,
